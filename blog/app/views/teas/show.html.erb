@@ -12,17 +12,24 @@
 
 <p>
   <b>Type of fluid:</b>
-  <%= @tea.type_of_fluid %>
+  <%= case @tea.type_of_fluid
+  when 1 then "Tea"
+  when 2 then "Tea-like"
+  when 3 then "Coffe"
+  end
+    %>
 </p>
 
 <p>
   <b>Webpage:</b>
-  <%= @tea.webpage %>
+  <%#= @tea.webpage %>
+  <%#= link_to "website", @tea.webpage %>
+  <a href="<%=@tea.webpage%>">website</a>
 </p>
 
 <p>
   <b>Image:</b>
-  <%= @tea.image %>
+  <img src="<%= @tea.image %>" />
 </p>
 
 <p>

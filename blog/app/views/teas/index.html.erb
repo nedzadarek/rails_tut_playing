@@ -1,6 +1,6 @@
 <h1>Listing teas</h1>
 
-<table>
+<table border="1px dashed">
   <tr>
     <th>Name</th>
     <th>Producer</th>
@@ -17,9 +17,14 @@
   <tr>
     <td><%= tea.name %></td>
     <td><%= tea.producer %></td>
-    <td><%= tea.type_of_fluid %></td>
-    <td><%= tea.webpage %></td>
-    <td><%= tea.image %></td>
+    <td>  <%= case tea.type_of_fluid
+  when 1 then "Tea"
+  when 2 then "Tea-like"
+  when 3 then "Coffe"
+  end
+    %></td>
+    <td><a href="<%=tea.webpage%>">website</a></td>
+    <td><img src="<%= tea.image %>" /></td>
     <td><%= tea.extra_content %></td>
     <td><%= link_to 'Show', tea %></td>
     <td><%= link_to 'Edit', edit_tea_path(tea) %></td>
