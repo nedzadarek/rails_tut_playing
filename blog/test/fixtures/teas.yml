@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  producer: MyString
+  type_of_fluid: 1
+  webpage: MyString
+  image: MyString
+  extra_content: MyText
+
+two:
+  name: MyString
+  producer: MyString
+  type_of_fluid: 1
+  webpage: MyString
+  image: MyString
+  extra_content: MyText

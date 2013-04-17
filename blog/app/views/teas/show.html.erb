@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @tea.name %>
+</p>
+
+<p>
+  <b>Producer:</b>
+  <%= @tea.producer %>
+</p>
+
+<p>
+  <b>Type of fluid:</b>
+  <%= @tea.type_of_fluid %>
+</p>
+
+<p>
+  <b>Webpage:</b>
+  <%= @tea.webpage %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @tea.image %>
+</p>
+
+<p>
+  <b>Extra content:</b>
+  <%= @tea.extra_content %>
+</p>
+
+
+<%= link_to 'Edit', edit_tea_path(@tea) %> |
+<%= link_to 'Back', teas_path %>

@@ -1,0 +1,33 @@
+<h1>Listing teas</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Producer</th>
+    <th>Type of fluid</th>
+    <th>Webpage</th>
+    <th>Image</th>
+    <th>Extra content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @teas.each do |tea| %>
+  <tr>
+    <td><%= tea.name %></td>
+    <td><%= tea.producer %></td>
+    <td><%= tea.type_of_fluid %></td>
+    <td><%= tea.webpage %></td>
+    <td><%= tea.image %></td>
+    <td><%= tea.extra_content %></td>
+    <td><%= link_to 'Show', tea %></td>
+    <td><%= link_to 'Edit', edit_tea_path(tea) %></td>
+    <td><%= link_to 'Destroy', tea, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tea', new_tea_path %>
