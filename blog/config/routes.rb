@@ -1,5 +1,7 @@
 Blog::Application.routes.draw do
-  resources :teas
+  resources :teas do
+    resources :comments
+  end
 
   get "home/index"
 
