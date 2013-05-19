@@ -29,7 +29,11 @@
 
 <p>
   <b>Image:</b>
+  <% if @tea.image.include? "http"%>
   <img src="<%= @tea.image %>" />
+  <%else%>
+    <%= image_tag('noimage.png', :alt=>"no image") %>
+  <%end%>
 </p>
 
 <p>
@@ -38,11 +42,13 @@
 </p>
 
 <h2>Comments</h2>
-<% @tea.comments.each do |f| %>
-  <p>Commenter:</p>
+<% @tea.comments.each_with_index do |f, i| %>
+  <div class="comments">
+  <h3>Commenter nr.<%=i%>:</h3>
   <%=f.commenter%>
-  <p>Comment: </p>
+  <h3>Comment: </h3>
   <%= f.body %>
+  </div>
 <%end%>
 
 <h2>Add a comment:</h2>
