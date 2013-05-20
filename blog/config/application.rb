@@ -11,6 +11,9 @@ end
 
 module Blog
   class Application < Rails::Application
+    #added to make scaffold create *.sass file instead of *.scss;
+    # http://stackoverflow.com/questions/11533346/set-stylesheet-engine-to-sass-in-rails-3-2-3
+    config.sass.preferred_syntax = :sass
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
