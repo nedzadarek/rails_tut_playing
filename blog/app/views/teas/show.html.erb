@@ -45,9 +45,14 @@
 <% @tea.comments.each_with_index do |f, i| %>
   <div class="comments">
   <h3>Commenter nr.<%=i%>:</h3>
+  <% if f.body.length >50 %>
+    <h1>DLUGI KOMENT</h1>
+  <%end%>
+    
   <%=f.commenter%>
   <h3>Comment: </h3>
-  <%= f.body %>
+  <%=  truncate(f.body, length: 50, separator: ' ' )  %><br>
+  <%#= f.body %>
   </div>
 <%end%>
 
