@@ -13,7 +13,7 @@
     <th></th>
   </tr>
 
-<% @teas.each do |tea| %>
+<% @teas.each do |tea| @tea=tea %>
   <tr>
     <td><%= tea.name %></td>
     <td><%= tea.producer %></td>
@@ -23,7 +23,8 @@
   when 3 then "Coffe"
   end
     %></td>
-    <td><a href="<%=tea.webpage%>">website</a></td>
+    <!-- <td><a href="<%=tea.webpage%>">website</a></td> -->
+    <td><%= render "teas/webpage" %></td>
     <td><img src="<%= tea.image %>" /></td>
     <td><%= tea.extra_content %></td>
     <td><%= link_to 'Show', tea %></td>
