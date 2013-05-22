@@ -1,0 +1,6 @@
+
+  <% if @tea.image.include? "http"%>
+  <img src="<%= @tea.image %>" />
+  <%else%>
+    <%= image_tag('noimage.png', :alt=>"no image") %>
+  <%end%>

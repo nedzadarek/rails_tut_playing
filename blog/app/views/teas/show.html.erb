@@ -12,12 +12,7 @@
 
 <p>
   <b>Type of fluid:</b>
-  <%= case @tea.type_of_fluid
-  when 1 then "Tea"
-  when 2 then "Tea-like"
-  when 3 then "Coffe"
-  end
-    %>
+  <%= render "type_of_fluid" %>
 </p>
 
 <p>
@@ -30,11 +25,7 @@
 
 <p>
   <b>Image:</b>
-  <% if @tea.image.include? "http"%>
-  <img src="<%= @tea.image %>" />
-  <%else%>
-    <%= image_tag('noimage.png', :alt=>"no image") %>
-  <%end%>
+  <%= render "image" %>
 </p>
 
 <p>

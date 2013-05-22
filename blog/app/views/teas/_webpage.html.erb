@@ -1,1 +1,4 @@
+<% if @tea.webpage.include? "http" %>
 <a href="<%=@tea.webpage%>">website</a>
+<% else %>Unavaible
+<%end%>
