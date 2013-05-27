@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130519204018) do
+ActiveRecord::Schema.define(:version => 20130527164251) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -22,6 +22,17 @@ ActiveRecord::Schema.define(:version => 20130519204018) do
   end
 
   add_index "comments", ["tea_id"], :name => "index_comments_on_tea_id"
+
+  create_table "tea_translations", :force => true do |t|
+    t.integer  "tea_id"
+    t.string   "locale"
+    t.text     "extra_content"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "tea_translations", ["locale"], :name => "index_tea_translations_on_locale"
+  add_index "tea_translations", ["tea_id"], :name => "index_tea_translations_on_tea_id"
 
   create_table "teas", :force => true do |t|
     t.string   "name"
