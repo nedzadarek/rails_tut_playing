@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<nav style="float:right;">
+<%= link_to  "English", locale: "en"%>
+<%= link_to "Polish", locale: "pl"%>
+</nav>
+<%= t 'hello' %>
+<%= yield %><br>
 </body>
 </html>

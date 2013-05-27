@@ -1,5 +1,12 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+ #Sample localization file for English. Add more files in this directory for other locales.
+ #See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
   hello: "Hello world"
+  listing_tea: "listing tea"
+  name: "name"
+  producer: "producer"
+  type_of_fluid: "type of fluid"
+  webpage: "webpage"
+  image: "image"
+  extra_content: "extra content"
